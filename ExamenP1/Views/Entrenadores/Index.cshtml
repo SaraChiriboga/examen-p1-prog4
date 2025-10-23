@@ -1,51 +1,40 @@
-﻿@model IEnumerable<ExamenP1.Models.Entrenador>
+@model IEnumerable<ExamenP1.Models.Entrenador>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Lista de Entrenadores";
 }
 
-<h2>Index</h2>
+<h2 class="text-center mb-4">Lista de Entrenadores</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(" Crear Nuevo", "Create", null, new { @class = "btn btn-success mb-3" })
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NombreEntrenador)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Region)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Edad)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PokemonId)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NombreEntrenador)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Region)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Edad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PokemonId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+<table class="table table-striped table-hover text-center align-middle">
+    <thead class="table-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.NombreEntrenador)</th>
+            <th>@Html.DisplayNameFor(model => model.Region)</th>
+            <th>@Html.DisplayNameFor(model => model.Edad)</th>
+            <th>Pokemon</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
 
-</table>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.NombreEntrenador)</td>
+                <td>@Html.DisplayFor(modelItem => item.Region)</td>
+                <td>@Html.DisplayFor(modelItem => item.Edad)</td>
+                <td>@Html.DisplayFor(modelItem => item.Pokemon.Nombre)</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-warning btn-sm" })
+                        @Html.ActionLink("Detalles", "Details", new { id = item.Id }, new { @class = "btn btn-info btn-sm text-white" })
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger btn-sm" })
+                    </div>
+                </td>
+            </tr>
+
