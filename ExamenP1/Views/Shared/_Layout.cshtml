@@ -1,34 +1,89 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Centro Pokémon</title>
+
+    <!-- Favicon Pokéball -->
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="https://cdn.pixabay.com/photo/2016/07/23/13/18/pokemon-1536849_1280.png" />
+
+    <!-- Color del navegador en móviles -->
+    <meta name="theme-color" content="#ef5350" />
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        body {
+            background: #F7F7F9;
+        }
+
+        .navbar-pokemon {
+            background: #ef5350;
+        }
+            /* rojo Pokémon */
+            .navbar-pokemon .navbar-brand,
+            .navbar-pokemon .nav-link {
+                color: #fff !important;
+            }
+
+                .navbar-pokemon .nav-link:hover {
+                    color: #ffeb3b !important;
+                }
+        /* amarillo Pokémon */
+        .navbar-brand img {
+            height: 28px;
+            width: auto;
+            margin-right: 8px;
+            border-radius: 50%;
+        }
+
+        footer {
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark navbar-pokemon">
         <div class="container">
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+            <a class="navbar-brand d-flex align-items-center" href="@Url.Action("Index","Home")">
+                <img src="https://cdn.pixabay.com/photo/2016/07/23/13/18/pokemon-1536849_1280.png" alt="Pokéball">
+                <span>Centro Pokémon</span>
+            </a>
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                    data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        @Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Pokémon", "Index", "Pokemones", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Entrenadores", "Index", "Entrenadores", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Acerca de", "About", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Centro Pokémon</p>
         </footer>
     </div>
 
