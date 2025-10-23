@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\software\\",
+  "WorkspaceRootPath": "C:\\Users\\saril\\Desktop\\progra4\\ExamenP1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B719B91C-65A1-48F6-92F0-6ECEAA59FE32}|ExamenP1\\ExamenP1.csproj|c:\\users\\usuario\\desktop\\software\\examenp1\\models\\pokemoncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B719B91C-65A1-48F6-92F0-6ECEAA59FE32}|ExamenP1\\ExamenP1.csproj|c:\\users\\saril\\desktop\\progra4\\examenp1\\examenp1\\models\\entrenador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B719B91C-65A1-48F6-92F0-6ECEAA59FE32}|ExamenP1\\ExamenP1.csproj|solutionrelative:examenp1\\models\\entrenador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B719B91C-65A1-48F6-92F0-6ECEAA59FE32}|ExamenP1\\ExamenP1.csproj|c:\\users\\saril\\desktop\\progra4\\examenp1\\examenp1\\models\\pokemoncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B719B91C-65A1-48F6-92F0-6ECEAA59FE32}|ExamenP1\\ExamenP1.csproj|solutionrelative:examenp1\\models\\pokemoncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B719B91C-65A1-48F6-92F0-6ECEAA59FE32}|ExamenP1\\ExamenP1.csproj|C:\\Users\\USUARIO\\Desktop\\software\\examenp1\\models\\pokemon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B719B91C-65A1-48F6-92F0-6ECEAA59FE32}|ExamenP1\\ExamenP1.csproj|C:\\Users\\saril\\Desktop\\progra4\\ExamenP1\\examenp1\\models\\pokemon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B719B91C-65A1-48F6-92F0-6ECEAA59FE32}|ExamenP1\\ExamenP1.csproj|solutionrelative:examenp1\\models\\pokemon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,10 +27,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Entrenador.cs",
+              "DocumentMoniker": "C:\\Users\\saril\\Desktop\\progra4\\ExamenP1\\ExamenP1\\Models\\Entrenador.cs",
+              "RelativeDocumentMoniker": "ExamenP1\\Models\\Entrenador.cs",
+              "ToolTip": "C:\\Users\\saril\\Desktop\\progra4\\ExamenP1\\ExamenP1\\Models\\Entrenador.cs",
+              "RelativeToolTip": "ExamenP1\\Models\\Entrenador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T15:58:56.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PokemonContext.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\software\\ExamenP1\\Models\\PokemonContext.cs",
+              "DocumentMoniker": "C:\\Users\\saril\\Desktop\\progra4\\ExamenP1\\ExamenP1\\Models\\PokemonContext.cs",
               "RelativeDocumentMoniker": "ExamenP1\\Models\\PokemonContext.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\software\\ExamenP1\\Models\\PokemonContext.cs",
+              "ToolTip": "C:\\Users\\saril\\Desktop\\progra4\\ExamenP1\\ExamenP1\\Models\\PokemonContext.cs",
               "RelativeToolTip": "ExamenP1\\Models\\PokemonContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -35,16 +52,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Pokemon.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\software\\ExamenP1\\Models\\Pokemon.cs",
+              "DocumentMoniker": "C:\\Users\\saril\\Desktop\\progra4\\ExamenP1\\ExamenP1\\Models\\Pokemon.cs",
               "RelativeDocumentMoniker": "ExamenP1\\Models\\Pokemon.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\software\\ExamenP1\\Models\\Pokemon.cs",
+              "ToolTip": "C:\\Users\\saril\\Desktop\\progra4\\ExamenP1\\ExamenP1\\Models\\Pokemon.cs",
               "RelativeToolTip": "ExamenP1\\Models\\Pokemon.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T15:42:38.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T15:42:38.675Z"
             }
           ]
         }
