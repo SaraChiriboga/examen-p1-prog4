@@ -1,33 +1,44 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+@{
+    ViewBag.Title = "Centro Pokémon";
 }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+<main style="background-color:#F7F7F9; min-height:100vh; padding:40px 0;">
+
+    <section class="text-center mb-5" aria-labelledby="pokemonTitle">
+        <h1 id="pokemonTitle">¡Bienvenido Entrenador Pokémon! ⚡</h1>
+        <p class="lead">Prepárate para vivir una aventura épica en el mundo Pokémon.</p>
     </section>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+    <div class="container">
+        <div class="row justify-content-center text-center">
+
+            <section class="col-md-4 mb-4" aria-labelledby="starterTitle">
+                <h2 id="starterTitle">¡Ingresa Pokemones!</h2>
+                <img src="https://cdn.dribbble.com/userupload/21193457/file/original-8c00e9c322223c8930eff042dc435445.gif"
+                     alt="pokemon"
+                     style="max-width:300px;" />
+                <p>Conoce a todos los pokemones!</p>
+                <p></p>
+                <p>
+                    <a class="btn btn-outline-danger" href="https://localhost:44348/Pokemones/Index">
+                        ¡Nuevo Pokémon! &raquo;
+                    </a>
+                </p>
+            </section>
+
+            <section class="col-md-4 mb-4" aria-labelledby="battleTitle">
+                <h2 id="battleTitle">¡Conoce a más entrenadores!</h2>
+                <img src="https://i.pinimg.com/originals/43/3a/51/433a51a84e8bd0f81360f558c3a2c700.gif"
+                     alt="pokemon"
+                     style="max-width:300px;" />
+                <p>Enfréntate a otros entrenadores y supera los desafíos.</p>
+                <p>
+                    <a class="btn btn-outline-warning" href="https://localhost:44348/Entrenadores/Index">
+                        ¡Entrenadores! &raquo;
+                    </a>
+                </p>
+            </section>
+
+        </div>
     </div>
 </main>
