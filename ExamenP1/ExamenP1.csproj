@@ -137,6 +137,14 @@
     <Compile Include="Migrations\202510231614441_Inicial.Designer.cs">
       <DependentUpon>202510231614441_Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202510231721138_v2.cs" />
+    <Compile Include="Migrations\202510231721138_v2.Designer.cs">
+      <DependentUpon>202510231721138_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202510231728589_AddEntrenadorPokemonNav.cs" />
+    <Compile Include="Migrations\202510231728589_AddEntrenadorPokemonNav.Designer.cs">
+      <DependentUpon>202510231728589_AddEntrenadorPokemonNav.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entrenador.cs" />
     <Compile Include="Models\PokemonContext.cs" />
@@ -238,6 +246,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202510231614441_Inicial.resx">
       <DependentUpon>202510231614441_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202510231721138_v2.resx">
+      <DependentUpon>202510231721138_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202510231728589_AddEntrenadorPokemonNav.resx">
+      <DependentUpon>202510231728589_AddEntrenadorPokemonNav.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -17,7 +17,8 @@ namespace ExamenP1.Controllers
         // GET: Entrenadores
         public ActionResult Index()
         {
-            return View(db.Entrenadores.ToList());
+            var entrenadores = db.Entrenadores.Include(e => e.Pokemon).ToList();
+            return View(entrenadores);
         }
 
         // GET: Entrenadores/Details/5
@@ -38,16 +39,21 @@ namespace ExamenP1.Controllers
         // GET: Entrenadores/Create
         public ActionResult Create()
         {
+            ViewBag.PokemonId = new SelectList(db.Pokemones.ToList(), "Id", "Nombre");
             return View();
         }
 
         // POST: Entrenadores/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,NombreEntrenador,Region,Edad,PokemonId")] Entrenador entrenador)
         {
+            // validar que el PokemonId seleccionado exista en la tabla Pokemons
+            if (!db.Pokemones.Any(p => p.Id == entrenador.PokemonId))
+            {
+                ModelState.AddModelError("PokemonId", "El Pokémon seleccionado no existe.");
+            }
+
             if (ModelState.IsValid)
             {
                 db.Entrenadores.Add(entrenador);
@@ -55,6 +61,7 @@ namespace ExamenP1.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.PokemonId = new SelectList(db.Pokemones.ToList(), "Id", "Nombre", entrenador.PokemonId);
             return View(entrenador);
         }
 
@@ -70,22 +77,27 @@ namespace ExamenP1.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.PokemonId = new SelectList(db.Pokemones.ToList(), "Id", "Nombre", entrenador.PokemonId);
             return View(entrenador);
         }
 
         // POST: Entrenadores/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,NombreEntrenador,Region,Edad,PokemonId")] Entrenador entrenador)
         {
+            if (!db.Pokemones.Any(p => p.Id == entrenador.PokemonId))
+            {
+                ModelState.AddModelError("PokemonId", "El Pokémon seleccionado no existe.");
+            }
+
             if (ModelState.IsValid)
             {
                 db.Entry(entrenador).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.PokemonId = new SelectList(db.Pokemones.ToList(), "Id", "Nombre", entrenador.PokemonId);
             return View(entrenador);
         }
 

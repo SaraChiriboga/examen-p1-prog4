@@ -83,3 +83,5 @@ C:\Users\saril\Desktop\progra4\ExamenP1\ExamenP1\obj\Debug\ExamenP1.dll
 C:\Users\saril\Desktop\progra4\ExamenP1\ExamenP1\obj\Debug\ExamenP1.pdb
 C:\Users\saril\Desktop\progra4\ExamenP1\ExamenP1\obj\Debug\ExamenP1.Migrations.Inicial.resources
 C:\Users\saril\Desktop\progra4\ExamenP1\ExamenP1\obj\Debug\ExamenP1.csproj.GenerateResource.cache
+C:\Users\saril\Desktop\progra4\ExamenP1\ExamenP1\obj\Debug\ExamenP1.Migrations.v2.resources
+C:\Users\saril\Desktop\progra4\ExamenP1\ExamenP1\obj\Debug\ExamenP1.Migrations.AddEntrenadorPokemonNav.resources

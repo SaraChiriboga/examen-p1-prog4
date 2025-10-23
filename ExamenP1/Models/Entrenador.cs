@@ -21,5 +21,8 @@ namespace ExamenP1.Models
         // Relación con Pokémon
     
         public int PokemonId { get; set; }
+
+        // Navegación para poder acceder a Pokemon desde la vista/controlador
+        public virtual Pokemon Pokemon { get; set; }
     }
 }
