@@ -6,8 +6,9 @@ using System.Web;
 
 namespace ExamenP1.Models
 {
-    public class PokemonContext
+    public class PokemonContext:DbContext
     {
+        public PokemonContext() : base("name=PokemonDbContext") { }
         public DbSet<Pokemon> Pokemones { get; set; }
         public DbSet<Entrenador> Entrenadores { get; set; }
     }

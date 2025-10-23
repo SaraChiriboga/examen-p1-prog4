@@ -21,7 +21,5 @@ namespace ExamenP1.Models
         // Relación con Pokémon
     
         public int PokemonId { get; set; }
-
-        public Pokemon Pokemon { get; set; }
     }
 }

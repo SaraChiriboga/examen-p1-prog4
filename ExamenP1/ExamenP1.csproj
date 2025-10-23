@@ -127,10 +127,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EntrenadoresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PokemonesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202510231614441_Inicial.cs" />
+    <Compile Include="Migrations\202510231614441_Inicial.Designer.cs">
+      <DependentUpon>202510231614441_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entrenador.cs" />
     <Compile Include="Models\PokemonContext.cs" />
     <Compile Include="Models\Pokemon.cs" />
@@ -187,6 +194,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Pokemones\Create.cshtml" />
+    <Content Include="Views\Pokemones\Delete.cshtml" />
+    <Content Include="Views\Pokemones\Details.cshtml" />
+    <Content Include="Views\Pokemones\Edit.cshtml" />
+    <Content Include="Views\Pokemones\Index.cshtml" />
+    <Content Include="Views\Entrenadores\Create.cshtml" />
+    <Content Include="Views\Entrenadores\Delete.cshtml" />
+    <Content Include="Views\Entrenadores\Details.cshtml" />
+    <Content Include="Views\Entrenadores\Edit.cshtml" />
+    <Content Include="Views\Entrenadores\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -217,6 +234,11 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202510231614441_Inicial.resx">
+      <DependentUpon>202510231614441_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
